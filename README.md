@@ -1,4 +1,84 @@
 # elevate_ml_tasks
+#task4
+____
+# 🧬 Breast Cancer Diagnosis - Logistic Regression Analysis
+
+This project performs exploratory data analysis and classification on the Wisconsin Breast Cancer dataset using Logistic Regression. The primary objective is to predict whether a tumor is **malignant (M)** or **benign (B)** based on various features computed from digitized images of fine needle aspirate (FNA) of breast masses.
+
+---
+
+## 📁 Dataset Overview
+
+- **Total Records:** 569
+- **Initial Features:** 33
+- **Target Variable:** `diagnosis` (M = Malignant, B = Benign)
+
+### 🔧 Data Preprocessing
+
+- Dropped:
+  - `id` column (not relevant for analysis)
+  - `Unnamed: 32` (contained only null values)
+- Encoded `diagnosis`:
+  - M → 1
+  - B → 0
+- Standardized features using `StandardScaler` to ensure all variables contribute equally to the model.
+
+---
+
+## 🤖 Model: Logistic Regression
+
+The model was trained on the **standardized dataset**, and evaluated using the default threshold (0.5).
+
+### 📊 Evaluation Metrics (Test Set)
+
+- **Confusion Matrix:**  
+  `[[70 1], [2 41]]`  
+  - 70 True Negatives  
+  - 1 False Positive  
+  - 2 False Negatives  
+  - 41 True Positives
+
+- **Precision:** `0.9762`
+- **Recall:** `0.9535`
+- **ROC-AUC Score:** `0.9974`
+
+---
+
+## 📈 Probability Mapping
+
+- Explained the **sigmoid function** used in Logistic Regression to map raw model output into a probability between 0 and 1.
+- This probability enables flexible classification by adjusting the decision threshold.
+
+---
+
+## 🎯 Threshold Tuning
+
+- Plotted **recall** vs various thresholds to evaluate model sensitivity.
+- Observed that:
+  - Recall remains **consistently high up to ~0.5**
+  - Then **declines significantly** beyond that point
+- The default threshold of **0.5** provided an optimal balance between precision and recall.
+
+---
+
+## ✅ Conclusion
+
+- The Logistic Regression model performs **extremely well** on this dataset.
+- The default threshold is effective, but analysis confirms threshold tuning can help in high-stakes environments where recall or precision may need to be prioritized.
+
+---
+
+## 📌 Technologies Used
+
+- Python (pandas, scikit-learn, matplotlib)
+- Jupyter Notebook
+
+---
+
+## 📂 Project Structure
+
+
+
 #task3
 ___
 🏡 Housing Price Prediction - Data Analysis Summary
