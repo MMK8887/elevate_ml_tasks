@@ -66,16 +66,7 @@ The model was trained on the **standardized dataset**, and evaluated using the d
 - The Logistic Regression model performs **extremely well** on this dataset.
 - The default threshold is effective, but analysis confirms threshold tuning can help in high-stakes environments where recall or precision may need to be prioritized.
 
----
 
-## 📌 Technologies Used
-
-- Python (pandas, scikit-learn, matplotlib)
-- Jupyter Notebook
-
----
-
-## 📂 Project Structure
 
 
 
